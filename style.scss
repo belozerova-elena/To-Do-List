@@ -1,0 +1,140 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Poppins&display=swap');
+$poppins: 'Poppins', sans-serif;
+$neonderthaw: 'Neonderthaw', cursive;
+// COLORS
+$turquoise: #75A29F;
+$light-turquoise: #B2DBD3;
+$dark-turquoise : #4D6469;
+$dark : #333333;
+$light : #DAEDE7;
+$pink : #C06471;
+$white: #FFFFFF;
+$beige: #F0D3C1;
+
+body {
+    margin: 0;
+    background-color: $white;
+    color: $dark;
+    font-family: $poppins;
+    font-size: 18px;
+}
+body::-webkit-scrollbar {
+    width: 12px;             
+}
+body::-webkit-scrollbar-track {
+    background: $turquoise;  
+}
+body::-webkit-scrollbar-thumb {
+    background-color: $dark-turquoise;
+    border-radius: 20px;
+    border: 3px solid $dark-turquoise;
+}
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+// HEADER
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: $light-turquoise;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid $turquoise;
+    &__title {
+        margin: 0px;
+        text-align: center;
+        font-family: $neonderthaw;
+        font-size: 40px;
+    }
+}
+// MAIN
+.main {
+    max-width: 1000px;
+    padding: 130px 15px 20px 15px;
+    margin: 0 auto;
+}
+// FORM
+.form {
+    display: flex;
+    justify-content: space-between;
+    &__input {
+        width: 100%;
+        padding: 20px;
+        background-color: $light-turquoise;
+        border-radius: 50px;
+        font-size: 20px;
+    }
+    &__button {
+        width: 120px;
+        margin-left: 10px;
+        background-color: $dark-turquoise;
+        color: $white;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: all 0.6s ease;
+        &:hover {
+            color: $beige;
+            background-color: $dark;
+        }
+    }
+}
+// TASKS
+.tasks {
+    padding: 10px;
+    margin-top: 30px;
+    background-color: $light;
+    border-radius: 15px;
+    &__title {
+        margin: 10px 0px;
+        font-family: $neonderthaw;
+        font-size: 36px;
+    }
+    &__task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px;
+        margin-top: 10px;
+        background-color: $dark-turquoise;
+        border-radius: 20px;
+    }
+    &__content {
+        flex: 1 1 0%;
+        margin-right: 10px
+    }
+    &__input {
+        width: 100%;
+        height: 30px;
+        color: $white;
+        &.active {
+            color: $beige;
+        }        
+    }
+    &__edit {
+        padding: 10px 15px;
+        margin: 0px 6px;
+        background-color: $turquoise;
+        color: $white;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: color 0.4s ease;
+        &:hover {
+            color: $dark;
+        }
+    }
+    &__delete {
+        padding: 10px;
+        background-color: $dark;
+        color: $white;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: color 0.4s ease;
+        &:hover {
+            color: $pink;
+        }
+    }
+}
